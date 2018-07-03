@@ -1,0 +1,95 @@
+
+
+
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Layout Containers ---- */
+.wrapper {
+	width: 95%;
+	max-width: 1150px;
+	background: #fff;
+	margin: auto;
+}
+
+.photo-header {
+	text-align: center;
+	padding: 3em 0;
+}
+
+.photo-container {
+	/*border: 3px solid red;*/
+	text-align: center;
+	margin-bottom: 4em;
+}
+
+/* ---- Page Elements ---- */
+.section-name {
+	font-size: 1.6em;
+	font-weight: 800;
+	margin: 0 0 1.5em;
+	line-height: 1;
+}
+.section-name span {
+	font-weight: 300;
+	margin-left: -7px;
+}
+
+.photo-container img {
+ 	max-width: 100%;
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) {
+	.wrapper {
+		padding: 0 1.2em 2.5em;
+	}
+	#highlight{
+		background: rgb(0,0,0,0.1);
+	}
+}
+
+@media (min-width: 769px) {
+	.wrapper {
+		padding: 0 2.5em 4em;
+	}
+
+	.photo-container {
+		width: 48%;
+		float: left;
+		margin-left: 4%;
+	}
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { 
+	.photo-container:nth-child(2n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
+
+@media (min-width: 1025px) { 
+	.photo-container {
+		width: 30%;
+	}
+
+	.photo-container:nth-child(3n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}

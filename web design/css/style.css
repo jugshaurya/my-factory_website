@@ -1,0 +1,284 @@
+/*using mobile first approach*/
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.5em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+/* ---- navigation styles ---- */
+
+.name {
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+
+.name,
+.main-nav li {
+	text-align: center;
+	background: #fff;
+	/*margin-top: .5em;
+	margin-bottom: .5em;*/
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #6765a3 ;
+	text-transform: uppercase;
+}
+
+.main-nav li:hover {
+	color: #3acec2;
+	background-color: rgba(0,0,0,0.1);
+}
+
+
+.name,
+.main-nav li,
+.main-nav a{
+	padding: .2em .5em;
+	display: block;
+}
+
+/*----- Banner --Factory  Area-------------*/
+
+.banner{
+	margin-top: 0;
+	background: url(../images/front.jpg);
+	background-repeat: no-repeat;
+	opacity: 1;
+	background-position: center;
+	background-size: cover;
+	/*min-height: 350px;*/
+	height: 70vh;
+	padding: 5px;
+	color: #093a58;
+	text-align: center;
+	background-attachment:fixed;
+}
+
+.logo{
+	margin-top: 70px;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	padding: 2px;
+	border: 6px solid white;
+	background-size: cover;
+
+}
+
+.logo-2{
+	margin-top: 70px;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+}
+
+.factory h1{
+	margin-top: 30px;
+	font-size: 2em;
+	margin-bottom: 0;
+}
+
+.factory span{
+	margin-top: 0;
+	font-size: 1em;
+	margin-bottom: 1em;
+}
+
+
+/* ---- Layout Containers ---- */
+
+.container{
+	margin-left:1em;
+	margin-right:1em;
+}
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	/*background: #3acec2;*/
+	/*background: rgb(217, 228, 234,0.8);*/
+	/*margin-bottom: 2em;*/
+	box-shadow: 0 4px 2px 2px rgba(0,0,0,0.4);
+}
+
+.main-footer {
+	text-align: center;
+	padding: 2em 0;
+	background: #d9e4ea;
+}
+
+
+/*   About us section*/
+
+.dark{
+	background: rgb(217, 228, 234,0.5);
+
+}
+
+.about{
+	/*border: 3px solid red;*/
+	text-align: center;
+	padding: 20px;
+}
+
+.about h2{
+	margin:0;
+}
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+/*  for screens wider than 569 px*/
+@media (min-width: 569px ){
+	
+	.main-nav li:hover {
+		color: #3acec2;
+		border-bottom: 3px solid gray;
+	}
+
+	.main-header{
+		padding : 0 ;
+	}
+
+	.name,
+	.main-nav li{
+		display: inline-block;
+	}
+
+	.container{
+		width: 85%;
+		max-width: 1100px;
+		margin: 0 auto;
+		text-align: center;
+		/*border: 3px solid red;*/
+	}
+
+	.col {    
+		display: inline-block;
+		width: 50%; 
+		margin-right: -.3em;
+		vertical-align: top;
+		padding-left: 1em;
+		padding-right: 1em;
+		text-align: left;
+		/*background: rgb(217, 228, 234,0.5);*/
+	}
+
+	/*images*/
+	.banner{
+		margin-top: 0;
+		height: 90vh;
+		padding: 10px;
+		color: #093a58;
+	}
+
+	.logo{
+		width: 150px;
+		height: 150px;
+	}
+
+	.logo-2{
+		margin-top: 70px;
+		border-radius: 50%;
+		width: 10px;
+		height: 10px;
+	}
+
+	.factory h1{
+		margin-top: 20px;
+		font-size: 4em;
+		margin-bottom: 0;
+
+	}
+
+	.factory span{
+		margin-top:0px;
+		font-size: 2em;
+		margin-bottom: 3em;
+	}
+
+	body {
+		padding-top: 98px;
+	}
+
+	.main-header {
+		position: fixed;
+		background: #fff;
+		box-shadow: 0 1px 4px rgba(0,0,0,.4);
+		width: 100%;
+		top: 0;
+		z-index: 1000;
+	}
+
+}
+
+/*  for screens wider than 769 px*/
+@media (min-width: 769px){
+	
+	.name,
+	.main-nav,
+	.main-nav li{
+		display: inline-block;
+	}
+
+	.name{
+		margin-right: 3em;
+	}
+
+	.main-nav li {
+		margin-right: .5em;
+	}
+
+	body {
+		padding-top: 75px;
+	}
+
+/*page indicators!*/
+	#highlight{
+		/*box-shadow: 0 1px 1px .5px rgba(0,0,0,0.4);*/
+		border-bottom: 3px solid gray;
+		background: rgba(0,0,0,0.1);
+		/*color: white;*/
+	}
+	
+	#highlight a{
+		color: blue;
+	}
+
+	
+}
